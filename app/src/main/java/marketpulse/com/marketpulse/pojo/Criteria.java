@@ -1,6 +1,6 @@
 package marketpulse.com.marketpulse.pojo;
 
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * Created by tanmay on 06/06/19.
@@ -9,9 +9,9 @@ import java.util.List;
 public class Criteria {
     private String type;
     private String text;
-    private List<Variable> variable;
+    private HashMap<String, Variable> variable;
 
-    public Criteria(String type, String text, List<Variable> variable) {
+    public Criteria(String type, String text, HashMap<String, Variable> variable) {
         this.type = type;
         this.text = text;
         this.variable = variable;
@@ -36,11 +36,11 @@ public class Criteria {
         this.text = text;
     }
 
-    public List<Variable> getVariable() {
+    public HashMap<String, Variable> getVariable() {
         return variable;
     }
 
-    public void setVariable(List<Variable> variable) {
+    public void setVariable(HashMap<String, Variable> variable) {
         this.variable = variable;
     }
 

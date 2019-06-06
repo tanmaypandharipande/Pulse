@@ -15,9 +15,9 @@ public class Variable {
     private int min_value;
     private int max_value;
     private int default_value;
-    private List<Integer> values;
+    private List<Double> values;
 
-    public Variable(String type, String study_type, String parameter_name, int min_value, int max_value, int default_value, List<Integer> values) {
+    public Variable(String type, String study_type, String parameter_name, int min_value, int max_value, int default_value, List<Double> values) {
         this.type = type;
         this.study_type = study_type;
         this.parameter_name = parameter_name;
@@ -78,11 +78,11 @@ public class Variable {
         this.default_value = default_value;
     }
 
-    public List<Integer> getValues() {
+    public List<Double> getValues() {
         return values;
     }
 
-    public void setValues(List<Integer> values) {
+    public void setValues(List<Double> values) {
         this.values = values;
     }
 
