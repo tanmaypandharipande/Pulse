@@ -9,4 +9,7 @@ public interface Constants {
     String DATA_URL = "https://mp-android-challenge.herokuapp.com/data";
 
     String COLOR_RED = "red";
+
+    //Intent
+    String INTENT_SCAN_OBJECT = "scan_object";
 }

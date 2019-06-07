@@ -1,5 +1,6 @@
 package marketpulse.com.marketpulse.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 
 //Last entity in the hierarchy
-public class Variable {
+public class Variable implements Serializable{
 
     private String type;
     private String study_type;

@@ -8,5 +8,8 @@
     <!--Scan -->
     <string name="text_name">Name</string>
     <string name="text_tag">Tag</string>
+
+    <!--Criteria-->
+    <string name="text_criteria">Criteria Text</string>
 </resources>
 

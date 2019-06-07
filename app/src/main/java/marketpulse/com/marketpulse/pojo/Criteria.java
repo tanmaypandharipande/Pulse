@@ -1,12 +1,13 @@
 package marketpulse.com.marketpulse.pojo;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
  * Created by tanmay on 06/06/19.
  */
 
-public class Criteria {
+public class Criteria implements Serializable{
     private String type;
     private String text;
     private HashMap<String, Variable> variable;

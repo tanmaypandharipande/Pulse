@@ -1,12 +1,13 @@
 package marketpulse.com.marketpulse.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by tanmay on 06/06/19.
  */
 
-public class Scan {
+public class Scan implements Serializable{
     private int id;
     private String name;
     private String tag;

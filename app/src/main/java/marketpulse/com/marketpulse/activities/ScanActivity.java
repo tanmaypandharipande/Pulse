@@ -2,6 +2,7 @@ package marketpulse.com.marketpulse.activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -93,6 +94,8 @@ public class ScanActivity extends AppCompatActivity implements ClickListner {
 
     @Override
     public void onItemClicked(View view, int position) {
-
+        Intent intent = new Intent(ScanActivity.this, CriteriaActivity.class);
+        intent.putExtra(Constants.INTENT_SCAN_OBJECT, scanList.get(position));
+        startActivity(intent);
     }
 }
