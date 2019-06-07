@@ -17,6 +17,7 @@ import marketpulse.com.marketpulse.R;
 import marketpulse.com.marketpulse.adapter.CriteriaAdapter;
 import marketpulse.com.marketpulse.helper.Constants;
 import marketpulse.com.marketpulse.helper.network.ClickListner;
+import marketpulse.com.marketpulse.pojo.Criteria;
 import marketpulse.com.marketpulse.pojo.Scan;
 
 /**
@@ -25,7 +26,7 @@ import marketpulse.com.marketpulse.pojo.Scan;
 
 public class CriteriaActivity extends AppCompatActivity implements ClickListner {
     private RecyclerView recyclerView;
-    private List<Scan> scanList = new ArrayList<>();
+    private List<Criteria> criteriaList = new ArrayList<>();
     private CriteriaAdapter criteriaAdapter;
     private TextView textView_tag, textView_text;
 
@@ -49,7 +50,9 @@ public class CriteriaActivity extends AppCompatActivity implements ClickListner 
         //scan object thought intent
         if (getIntent() != null) {
             Scan scan = (Scan) getIntent().getSerializableExtra(Constants.INTENT_SCAN_OBJECT);
-            scanList.add(scan);
+            for(int i =0;i<scan.getCriteria().size();i++){
+                criteriaList.add(scan.getCriteria().get(i));
+            }
             if (scan.getName() != null) {
                 textView_text.setText(scan.getName());
             }
@@ -59,7 +62,7 @@ public class CriteriaActivity extends AppCompatActivity implements ClickListner 
             if (scan.getColor().equals(Constants.COLOR_RED)) {
                 textView_tag.setTextColor(Color.RED);
             }
-            criteriaAdapter = new CriteriaAdapter(scanList, this);
+            criteriaAdapter = new CriteriaAdapter(criteriaList, this);
             recyclerView.setAdapter(criteriaAdapter);
             criteriaAdapter.setClickListner(this);
 
