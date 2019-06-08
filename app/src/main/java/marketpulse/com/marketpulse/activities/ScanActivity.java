@@ -49,9 +49,7 @@ public class ScanActivity extends AppCompatActivity implements ClickListner {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(mLayoutManager);
-//        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(
-//                getApplicationContext()
-//        ));
+
         getData(ScanActivity.this, requestQueue);
 
     }
