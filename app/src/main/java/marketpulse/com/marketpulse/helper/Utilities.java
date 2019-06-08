@@ -4,9 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 /**
  * Created by tanmay on 06/06/19.
  */

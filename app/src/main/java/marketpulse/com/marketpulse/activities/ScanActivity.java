@@ -3,37 +3,32 @@ package marketpulse.com.marketpulse.activities;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.JsonReader;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-
-import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import marketpulse.com.marketpulse.R;
 import marketpulse.com.marketpulse.adapter.ScanAdapter;
+import marketpulse.com.marketpulse.helper.ClickListner;
 import marketpulse.com.marketpulse.helper.Constants;
 import marketpulse.com.marketpulse.helper.Utilities;
-import marketpulse.com.marketpulse.helper.network.ClickListner;
 import marketpulse.com.marketpulse.helper.network.ServerErrorCallback;
 import marketpulse.com.marketpulse.helper.network.ServerJSONArrayCallback;
 import marketpulse.com.marketpulse.pojo.Scan;
+import marketpulse.com.marketpulse.pojo.Variable;
 import marketpulse.com.marketpulse.service.ApiService;
 
 public class ScanActivity extends AppCompatActivity implements ClickListner {
@@ -54,7 +49,9 @@ public class ScanActivity extends AppCompatActivity implements ClickListner {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(mLayoutManager);
-
+//        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(
+//                getApplicationContext()
+//        ));
         getData(ScanActivity.this, requestQueue);
 
     }
@@ -97,5 +94,10 @@ public class ScanActivity extends AppCompatActivity implements ClickListner {
         Intent intent = new Intent(ScanActivity.this, CriteriaActivity.class);
         intent.putExtra(Constants.INTENT_SCAN_OBJECT, scanList.get(position));
         startActivity(intent);
+    }
+
+    @Override
+    public void onCriteriaItemClicked(View view, int position, HashMap<String, Variable> hashMap, String selected) {
+
     }
 }

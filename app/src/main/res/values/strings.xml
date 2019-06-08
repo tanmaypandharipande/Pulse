@@ -10,6 +10,13 @@
     <string name="text_tag">Tag</string>
 
     <!--Criteria-->
+    <string name="text_criteria_title">Criteria</string>
     <string name="text_criteria">Criteria Text</string>
+
+    <!--Values-->
+    <string name="text_value_title">Values</string>
+    <!--Indicator-->
+    <string name="text_set_params">Set Parameters</string>
+    <string name="text_period">Period</string>
 </resources>
 

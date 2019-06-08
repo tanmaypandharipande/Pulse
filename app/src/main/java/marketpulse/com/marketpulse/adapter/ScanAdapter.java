@@ -13,8 +13,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import marketpulse.com.marketpulse.R;
+import marketpulse.com.marketpulse.helper.ClickListner;
 import marketpulse.com.marketpulse.helper.Constants;
-import marketpulse.com.marketpulse.helper.network.ClickListner;
 import marketpulse.com.marketpulse.pojo.Scan;
 
 /**
@@ -23,8 +23,8 @@ import marketpulse.com.marketpulse.pojo.Scan;
 
 public class ScanAdapter extends RecyclerView.Adapter<ScanAdapter.CustomViewHolder> {
     private List<Scan> itemsList;
-    ClickListner clickListner;
-    Context context;
+    private ClickListner clickListner;
+    private Context context;
     private int lastPosition = -1;
 
     public ScanAdapter(List<Scan> itemsList, Context context) {

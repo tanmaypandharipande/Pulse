@@ -10,8 +10,13 @@ public interface Constants {
 
     String COLOR_RED = "red";
 
+    //Pattern match for generated dynamic link
+    String PATTERN = "\\((.*?)\\)";
+
     //Intent
     String INTENT_SCAN_OBJECT = "scan_object";
+    String INTENT_VARIABLE_OBJECT = "variable_object";
+    String INTENT_INDICATOR_OBJECT = "indicator_object";
 
     //Parsing
     String CRITERIA_VARIABLE = "variable";

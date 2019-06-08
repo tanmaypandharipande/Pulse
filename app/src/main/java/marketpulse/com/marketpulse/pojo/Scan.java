@@ -7,6 +7,7 @@ import java.util.List;
  * Created by tanmay on 06/06/19.
  */
 
+//First entity in the hierarchy
 public class Scan implements Serializable{
     private int id;
     private String name;
